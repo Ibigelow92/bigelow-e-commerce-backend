@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
     });
 
     if (!tagData) {
-      res.status(404).json({ message: 'No tag found with that id!' });
+      res.status(404).json({ message: 'No tag with that ID was found' });
       return;
     }
 
@@ -35,10 +35,13 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+//!If there's anything left to be done, it's probably here
 router.post('/', async (req, res) => {
   // create a new tag
   try {
-    const tagData = await Tag.create;
+    const tagData = await Tag.create({
+      tag_id: req.body.tag_id,
+    });
     res.status(200).json(tagData);
   } catch (err) {
     res.status(400).json(err);
@@ -55,7 +58,7 @@ router.put('/:id', async (req, res) => {
       },
       {
         where: {
-          id: req.params.id
+          id: req.params.id,
         }
       }
     );
@@ -76,7 +79,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!tagData) {
-      res.status(404).json({ message: 'No tag found with that id!' });
+      res.status(404).json({ message: 'No tag with that ID was found' });
       return;
     }
 
