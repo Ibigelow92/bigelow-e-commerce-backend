@@ -29,7 +29,7 @@ router.get('/:id', async (req, res) => {
     });
 
     if (!productData) {
-      res.status(404).json({ message: 'No category found with that associated product!' });
+      res.status(404).json({ message: 'No product with that ID was found' });
       return;
     }
 
@@ -38,8 +38,6 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-//Didn't do this yet
 
 // create new product
 router.post('/', (req, res) => {
@@ -127,7 +125,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!productData) {
-      res.status(404).json({ message: 'No product found with that associated ID!' });
+      res.status(404).json({ message: 'No product with that ID was found' });
       return;
     }
 
