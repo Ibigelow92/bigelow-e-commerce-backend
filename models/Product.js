@@ -10,7 +10,41 @@ class Product extends Model {}
 Product.init(
   {
     // define columns
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    product_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    price: {
+      type: Datatypes.DECIMAL,
+      allowNull: false,
+      validate: {
+        isDecimal: true,
+      },
+    },
+    product_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: 10,
+      validate: {
+        isNumeric: true,
+      },
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Category',
+        key: 'id',
+      },
+    },
+    
   },
+
   {
     sequelize,
     timestamps: false,
@@ -21,3 +55,46 @@ Product.init(
 );
 
 module.exports = Product;
+
+// * `Product`
+
+//   * `id`
+  
+//     * Integer.
+  
+//     * Doesn't allow null values.
+  
+//     * Set as primary key.
+  
+//     * Uses auto increment.
+
+//   * `product_name`
+  
+//     * String.
+  
+//     * Doesn't allow null values.
+
+//   * `price`
+  
+//     * Decimal.
+  
+//     * Doesn't allow null values.
+  
+//     * Validates that the value is a decimal.
+// https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/
+
+//   * `stock`
+  
+//     * Integer.
+  
+//     * Doesn't allow null values.
+  
+//     * Set a default value of `10`.
+  
+//     * Validates that the value is numeric.
+
+//   * `category_id`
+  
+//     * Integer.
+  
+//     * References the `Category` model's `id`.

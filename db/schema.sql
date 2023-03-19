@@ -1,3 +1,4 @@
+-- No change needed here
 -- DROP DATABASE
 DROP DATABASE IF EXISTS ecommerce_db;
 
