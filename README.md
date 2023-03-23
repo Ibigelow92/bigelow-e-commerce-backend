@@ -10,7 +10,29 @@ To install the project, clone the repo to your device.
 
 ## Usage
 
-To use the project, you first need to have the repo cloned to your device. Once you have it, open the repo in VS Code. You will need to install the dependencies. right click the file "server.js", open the integrated terminal and type "npm i", then press enter. This will install your dependencies. Next, navigate to the .env file. Type your MySql password in the password field and "root" in the user field. Now you are ready to begin the process of seeding your database. You will need to navigate to the MySql integrated terminal. In the Bash terminal, type "mysql -u root -p", then press enter. You will be prompted to enter your MySql password. Enter it and press enter again. You are now in the MySql terminal. Type "SOURCE db/schema.sql;" then press enter. After that, simply type "quit" and then press enter. You no longer need to use the MySql terminal. The final step in seeding your database will be done in the Bash terminal. Type "npm run seed" and "npm start". Your database should now be seeded. To test your endpoints, open up Insomnia. Make a GET request using the following URL: localhost:3001/api/products. This should return all the seed data in JSON format in the righthand column. You can do a GET request for single columns too by entering the ID of the thing you're looking for at the end of the URL, like so: localhost:3001/api/products. You can also make POST, PUT and DELETE requests. For more details about running these tests, refer to the tests section of the README. 
+To use the project, you first need to have the repo cloned to your device. Once you have it, open the repo in VS Code. You will need to install the dependencies. right click the file "server.js", open the integrated terminal and type "npm i", then press enter. This will install your dependencies. Next, navigate to the .env file. Type your MySql password in the password field and "root" in the user field. Now you are ready to begin the process of seeding your database. You will need to navigate to the MySql integrated terminal. In the Bash terminal, type "mysql -u root -p", then press enter. 
+
+![image](https://user-images.githubusercontent.com/115512219/227386908-280f83af-1a67-4fe9-b733-90f3782e2bb6.png)
+
+You will be prompted to enter your MySql password. Enter it and press enter again. You are now in the MySql terminal. Type "SOURCE db/schema.sql;" then press enter.
+
+![image](https://user-images.githubusercontent.com/115512219/227387021-e183d8bb-bdf4-4602-baaf-897dc93d8a85.png)
+
+After that, simply type "quit" and then press enter. You no longer need to use the MySql terminal. 
+
+![image](https://user-images.githubusercontent.com/115512219/227387229-d6674707-e34d-4ab8-abde-2d1fd4f23e83.png)
+
+The final step in seeding your database will be done in the Bash terminal. Type "npm run seed" and "npm start". 
+
+![image](https://user-images.githubusercontent.com/115512219/227387290-2505565c-9693-42a0-ae7b-20b5e177894b.png)
+![image](https://user-images.githubusercontent.com/115512219/227387365-e1768b47-2602-4d2b-8814-37d16343420c.png)
+
+Your database should now be seeded. To test your endpoints, open up Insomnia. Make a GET request using the following URL: localhost:3001/api/products. This should return all the seed data in JSON format in the righthand column. 
+
+![image](https://user-images.githubusercontent.com/115512219/227387464-ac7c7fac-25c5-4b21-9c01-d79cf15f3da5.png)
+
+You can do a GET request for single columns too by entering the ID of the thing you're looking for at the end of the URL, like so: localhost:3001/api/products. You can also make POST, PUT and DELETE requests. For more details about running these tests, refer to the tests section of the README. 
+
 ## Credits
 
 TA's Roman Senin and Anthony Quinones helped with debugging, along with instructor Alexander Kaufman. 
