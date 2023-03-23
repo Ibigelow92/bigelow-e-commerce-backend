@@ -63,4 +63,32 @@ SOFTWARE.
 
 ## Tests
 
-The code can be tested after you run "db/schema.sql" in the MySql terminal. Exit the MySql terminal and open "server.js" in the Bash terminal. First, type "npm run seed" and press enter. You should see four messages, telling you that each table has been seeded. Now type "npm start" into the terminal and pres enter. You should get a message saying the app is listening on port 3001. The remaining tests must be done using Insomnia. Open Insomnia and click on any collection, or start a new one. Make a GET request using the following URL: localhost:3001/api/products. If you see a set of JSON data in the right column, then the GET route was successful. While this GET request returns all products, you can test it with just one product. To view one product, type a forward slash after the URL, followed by the ID of the product. This should return the data for just one. This same pair of tests can be performed on any table, such as tags, categories or product_tags. To test the POST routes, change the dropdown menu next to the URL to "POST". Then type in a new set of JSON data into the field just below it. Remember, you must set the data type to JSON if you have not already done so. After you click "send", make a GET request for whichever table you added to. The URL should look like this: localhost:3001/api/products. Scroll to the bottom of your response and you should see the data you entered. To test the PUT route, take a pre-existing column, copy the JSON data from the right column to the center text field and change one or more things about it. In the dropdown menu next to the URL field, select "PUT" then click "send". Now when you view the same data with a GET request, it should show the updated information. Finally, to test the DELETE route, select DELETE in the dropdown menu and select the ID of whichever thing you want to delete. Click "send" and then verify the thing has been deleted by making another GET request. 
+The code can be tested after you run "db/schema.sql" in the MySql terminal. Exit the MySql terminal and open "server.js" in the Bash terminal. First, type "npm run seed" and press enter. You should see four messages, telling you that each table has been seeded. 
+
+![image](https://user-images.githubusercontent.com/115512219/227387840-baff9182-836a-4039-a856-734888eede07.png)
+
+Now type "npm start" into the terminal and pres enter. You should get a message saying the app is listening on port 3001. 
+
+![image](https://user-images.githubusercontent.com/115512219/227387927-ea3dcbc3-0307-4ab5-a603-41dd274bc71e.png)
+
+The remaining tests must be done using Insomnia. Open Insomnia and click on any collection, or start a new one. Make a GET request using the following URL: localhost:3001/api/products. If you see a set of JSON data in the right column, then the GET route was successful. 
+
+![image](https://user-images.githubusercontent.com/115512219/227388994-976d4964-398f-4ce5-860e-90fcaefcc358.png)
+
+While this GET request returns all products, you can test it with just one product. To view one product, type a forward slash after the URL, followed by the ID of the product. This should return the data for just one. 
+
+![image](https://user-images.githubusercontent.com/115512219/227389101-0dc5244c-a738-4f18-b7f7-cd89800fe7d7.png)
+
+This same pair of tests can be performed on any table, such as tags, categories or product_tags. To test the POST routes, change the dropdown menu next to the URL to "POST". Then type in a new set of JSON data into the field just below it. Remember, you must set the data type to JSON if you have not already done so. 
+
+![image](https://user-images.githubusercontent.com/115512219/227389601-54782be4-ba0e-4cff-b58b-059fdf7466bd.png)
+
+After you click "send", make a GET request for whichever table you added to. The URL should look like this: localhost:3001/api/products/9. 
+
+![image](https://user-images.githubusercontent.com/115512219/227389744-639a1fd0-7304-4091-87a8-281c6b2a8548.png)
+
+Scroll to the bottom of your response and you should see the data you entered. To test the PUT route, take a pre-existing column, copy the JSON data from the right column to the center text field and change one or more things about it. In the dropdown menu next to the URL field, select "PUT" then click "send". Now when you view the same data with a GET request, it should show the updated information. Finally, to test the DELETE route, select DELETE in the dropdown menu and select the ID of whichever thing you want to delete. 
+
+![image](https://user-images.githubusercontent.com/115512219/227389843-e68b9394-cd86-44b8-8044-64aad04b001e.png)
+
+Click "send" and then verify the thing has been deleted by making another GET request. 
